@@ -15,6 +15,10 @@ const CARDS = [
 
 const inviteUrl = process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL;
 
+const hostSite =
+  process.env.NEXT_PUBLIC_GGHOME_URL ||
+  process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL;
+
 export default function ContentSection() {
   const t = useTranslations("content");
   const [activeTab, setActiveTab] = useState(0);
@@ -43,7 +47,7 @@ export default function ContentSection() {
         className="cards-grid"
         style={{ cursor: "pointer" }}
         onClick={() => {
-          window.location.href = inviteUrl;
+          window.location.href = hostSite;
         }}
       >
         {CARDS.map((src, i) => (

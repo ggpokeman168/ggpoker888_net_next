@@ -20,6 +20,10 @@ const MOBILE_BANNERS = [
 
 const inviteUrl = process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL;
 
+const hostSite =
+  process.env.NEXT_PUBLIC_GGHOME_URL ||
+  process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL;
+
 export default function HeroBanner() {
   const t = useTranslations("hero");
 
@@ -29,7 +33,7 @@ export default function HeroBanner() {
       <div
         className="banner-track"
         onClick={() => {
-          window.location.href = inviteUrl;
+          window.location.href = hostSite;
         }}
         style={{ cursor: "pointer" }}
       >
