@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "brand": "Brand Events",
+    "promo": "Promotions",
+    "download": "Download",
+    "categories": "Game Types",
+    "tournaments": "Tournaments",
+    "team": "Teams",
+    "vip": "VIP Rewards",
+    "mall": "GG Mall"
+  },
+  "hero": {
+    "title": "Experience Poker Anytime",
+    "subtitle": "GGPoker's official Chinese version,\ncrafted for Asian players — the most trusted\nonline competitive poker platform.",
+    "cta": "Download Now"
+  },
+  "news": {
+    "label": "Latest News",
+    "text": "Monthly tournament prize pool exceeds 10M! 🎉 New users get a 1000 welcome bonus 🎁 GGPoker active users surpass 1.5M!"
+  },
+  "content": {
+    "tab1": "Monthly Picks",
+    "tab2": "Global Events",
+    "tab3": "Features"
+  },
+  "tournament": {
+    "title": "Thrilling Tournaments"
+  },
+  "ad": {
+    "title": "Choose GGPoker for Poker",
+    "subtitle": "Play poker whenever and wherever with GGPUKE",
+    "cta": "Download Now",
+    "note": "Mobile / Desktop — no limits"
+  },
+  "article": {
+    "title": "GGPoker: A Trusted Online Poker Platform",
+    "date": "January 15, 2025",
+    "author": "GGPoker Operations Team",
+    "p1": "GGPoker's official Chinese version is dedicated to building the most professional and trusted online competitive poker environment for Asian players, offering cash games, tournaments, heads-up and more.",
+    "h2_1": "Platform Features",
+    "p2": "GGPoker employs world-class security mechanisms with bank-grade encryption to fully protect every player's account and funds, along with a professional anti-cheat system ensuring fair play.",
+    "p3": "The platform supports multi-device play seamlessly on both mobile and desktop. We continuously improve performance to deliver a superior experience on any device.",
+    "h2_2": "Diverse Game Selection",
+    "p4": "Players can join tournaments of all sizes — from regular events to massive million-dollar prize pools. Special promotions are launched regularly with generous rewards.",
+    "p5": "Whether you're a beginner or a seasoned pro, GGPoker has the right space for you, from comprehensive beginner guides to high-stakes tables and professional tournaments.",
+    "tags": [
+      "GGPoker",
+      "Online Poker",
+      "Poker Game",
+      "Tournaments",
+      "Cash Games",
+      "Download Poker",
+      "Mobile Poker",
+      "PC Poker",
+      "High Stakes",
+      "Safe Poker",
+      "Fair Play"
+    ]
+  },
+  "footer": {
+    "description": "GGPoker's official Chinese platform — Asia's most popular online poker destination. Committed to safe, fair poker with cash games, tournaments, and heads-up play.",
+    "about": "About GGPoker",
+    "about_links": [
+      "About Us",
+      "Privacy Policy",
+      "Terms of Service",
+      "Responsible Gaming",
+      "Security"
+    ],
+    "help": "Help Center",
+    "help_links": [
+      "FAQ",
+      "Download Guide",
+      "Game Rules",
+      "Payment Help",
+      "Registration"
+    ],
+    "games": "Game Types",
+    "games_links": [
+      "Cash Games",
+      "Tournaments",
+      "Heads-Up",
+      "Million Dollar Series",
+      "High Roller"
+    ],
+    "copyright": "© 2025 GGPoker (Official Chinese Version). All rights reserved. | Play responsibly | 18+ only"
+  },
+  "floating": {
+    "title": "GGPoker - Chinese Version",
+    "desc": "Safe & Secure · Fair Play",
+    "cta": "Download Now"
+  }
+}
