@@ -8,6 +8,43 @@ import { useRouter, usePathname } from "next/navigation";
 
 const inviteUrl = process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL;
 
+const hostSite =
+  process.env.NEXT_PUBLIC_GGHOME_URL ||
+  process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL;
+
+/**
+ * 智能跳转方法
+ * @param {string} target - 目标地址（URL 或 锚点 ID）
+ */
+function smartNavigate(target: any) {
+  if (!target || typeof target !== "string") return;
+
+  // 1. 判断是否为锚点（以 # 开头）
+  if (target.startsWith("#")) {
+    const element = document.querySelector(target);
+    if (element) {
+      // 使用平滑滚动增强体验
+      element.scrollIntoView({ behavior: "smooth" });
+      // 同时更新 URL hash，方便用户刷新后定位
+      history.pushState(null, null, target);
+    } else {
+      console.warn(`未找到 ID 为 ${target} 的元素`);
+    }
+  }
+  // 2. 判断是否为外部链接或绝对路径
+  else if (
+    target.startsWith("http") ||
+    target.startsWith("/") ||
+    target.includes(".")
+  ) {
+    window.location.href = target;
+  }
+  // 3. 兜底处理：尝试作为普通路径跳转
+  else {
+    window.location.href = `./${target}`;
+  }
+}
+
 export default function Header() {
   const t = useTranslations("nav");
   const locale = useLocale();
@@ -16,7 +53,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    { key: "brand", href: "#brand" },
+    { key: "brand", href: hostSite },
     { key: "promo", href: "#promo" },
     { key: "download", href: "#download" },
     { key: "categories", href: "#categories" },
@@ -64,7 +101,7 @@ export default function Header() {
                 href={item.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  window.location.href = inviteUrl;
+                  smartNavigate(item.href);
                 }}
               >
                 {t(item.key)}
