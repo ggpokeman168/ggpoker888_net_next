@@ -1,6 +1,7 @@
 // src/lib/sanity.ts
 import { createClient } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
+
+import { createImageUrlBuilder } from "@sanity/image-url";
 
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -9,7 +10,7 @@ export const client = createClient({
   useCdn: true, // 开启 CDN 缓存，提高前台加载速度
 });
 
-const builder = imageUrlBuilder(client);
+const builder = createImageUrlBuilder(client);
 
 export function urlFor(source: any) {
   return builder.image(source);

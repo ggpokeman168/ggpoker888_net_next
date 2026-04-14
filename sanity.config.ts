@@ -7,14 +7,38 @@ import { schemaTypes } from "./src/sanity/schema";
 export default defineConfig({
   name: "default",
   title: "GGPoker Blog Admin",
-  // 注意：在执行 sanity deploy 时，CLI 可能读取不到 .env.local
-  // 如果报错，可以暂时硬编码 ID 进行部署，或者确保目录下有 sanity.cli.ts
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "04d43xwy",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "chqcoges",
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
 
-  // 删掉 basePath: "/admin", 因为官方托管环境不需要这个路径映射
-
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({
+      structure: (S) =>
+        S.list()
+          .title("内容分类管理")
+          .id("root")
+          .items([
+            S.listItem()
+              .id("news_post")
+              .title("新闻资讯")
+              .child(
+                S.documentList()
+                  .id("news_post_list")
+                  .title("新闻资讯")
+                  .filter('_type == "news_post"')
+              ),
+            S.listItem()
+              .id("faq_post")
+              .title("常见问题")
+              .child(
+                S.documentList()
+                  .id("faq_post_list")
+                  .title("常见问题")
+                  .filter('_type == "faq_post"')
+              ),
+          ]),
+    }),
+    visionTool(),
+  ],
   schema: {
     types: schemaTypes,
   },

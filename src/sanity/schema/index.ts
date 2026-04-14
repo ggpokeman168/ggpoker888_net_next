@@ -1,2 +1,3 @@
 import { post } from "./post";
-export const schemaTypes = [post];
+import { faq } from "./faq";
+export const schemaTypes = [post, faq];

@@ -1,6 +1,6 @@
-export const post = {
-  name: "news_post",
-  title: "文章",
+export const faq = {
+  name: "faq_post",
+  title: "常见问题",
   type: "document",
   fields: [
     { name: "title", title: "标题", type: "string" },
